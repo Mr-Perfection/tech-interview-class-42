@@ -14,3 +14,9 @@ All root-to-leaf paths are:
 
 FB
 '''
+class Node(object):
+  val = 0
+  left, right = None, None
+
+  def __init__(self, val):
+    self.val = val
