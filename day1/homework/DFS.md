@@ -1,5 +1,15 @@
 ```py
+root = Node(5)
 
+             5
+        4        2
+    1       3   
+pre_order(root)
+1 4 3 5 2
+in_order(root)
+5 4 1 3 2
+post_order(root)
+1 3 4 2 5
 # DFS is called Depth first search.
 # It is implemented as typical Tree Traversal (pre-order, in-order, and post-order)
 # Also, it is implemented as Graph Traversal (using Stack). 
@@ -14,14 +24,14 @@ def in_order(root):
     if not root:
         return
     print(root.val)
-    pre_order(root.left)
-    pre_order(root.right)
+    in_order(root.left)
+    in_order(root.right)
 
 def post_order(root):
     if not root:
         return
-    pre_order(root.left)
-    pre_order(root.right)
+    post_order(root.left)
+    post_order(root.right)
     print(root.val)
 
 # Let's say you have a graph...
@@ -33,6 +43,7 @@ graph = {'A': ['B', 'C'],
          'F': ['C']}
 
 # this is graph traversal.
+# Time complexity: O(V + E), v is a number of vertexes or nodes and E is a number of adj. nodes.
 def DFS(graph, start, end):
     stack = [start]
     path, visited = '', set()
@@ -44,9 +55,9 @@ def DFS(graph, start, end):
                 return path
             path += el + '->'
             visited.add(el)
-            for node in graph[el]:
-                if node not in visited:
-                    stack.append(node)
+            for adj in graph[el]:
+                if adj not in visited:
+                    stack.append(adj)
     return 'Destination is unreachable'
 
 # modified version.
@@ -79,5 +90,6 @@ else:
 
 # Try to understand the difference between DFS and DFS_modified. Both serve different purposes.
 # test it out in https://repl.it/languages/python3
+# definitely google DFS algorithm and try to understand by implementing by yourself.
 
 ```
