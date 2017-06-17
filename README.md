@@ -18,8 +18,9 @@ Students will be solving problems within time limit (depending on difficulties),
 3. Once you get the example input or output from the interviewer, try to find a pattern.
 4. Speaking of pattern, what I meant is which data structures or algorithms you can use to solve this challenging problem.
 5. Think hard (3-10 minutes).
-6. Can't think of the most efficient way, start from bruteforce (6-10 minutes).
-7. If you can think of more efficient approaches, awesome! (10-20 minutes)
+6. Can't think of the most efficient way, start from bruteforce (6-10 minutes). =
+7. If you can think of more efficient approaches, awesome! Tell the interviewer your time & space complexity (10-20 minutes)..
+   There could be a better approach.
 8. Communication is the key. Always communicate how your thought process is. 
    Interviewer will guide you to the right path if you are way off.
 
